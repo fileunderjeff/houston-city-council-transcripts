@@ -1,5 +1,5 @@
 # houston-city-council-transcripts
-I am curious about word frequencies and combinations used by candidates when they are running for office.
+This is a text mining project for transcripts of candidate interviews. I am curious about word frequencies and combinations used by candidates when they are running for office.
 
 The League of Women Voters Houston (http://lwvhouston.org) conducts interviews with candidates for Houston City Council. Generally, they ask candidates the same questions.
 
