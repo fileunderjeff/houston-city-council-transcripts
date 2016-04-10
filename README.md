@@ -27,3 +27,5 @@ Future plans include:
 
 - Adding all council districts (letter & at large)
 - Look at word frequency based on issue, issue/candidate
+
+You can view and comment on the completed word frequency matricies here: https://docs.google.com/spreadsheets/d/1GysPef6KByUq9cVmaYZGDM82GZ9MCFvQvCHtfQMQOE4
