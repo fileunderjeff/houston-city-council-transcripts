@@ -6,23 +6,22 @@ path_to_transcripts <- 'raw'
 path_to_clean_dir <- 'clean'
 
 make_bag_of_words <- function(path){
-	raw_words <- readLines(path) %>%
-		strsplit(" ")
-	bag_of_words <- unlist(raw_words) %>%
+	bag_of_words <- readLines(path) %>%
+		strsplit(" ") %>%
+	  unlist() %>%
 		tolower()
 	return(bag_of_words)
 }
 
 concat_words <- function(path){
-	bag <- make_bag_of_words(path)
-	one_line <- paste(bag, collapse=" ")
+	one_line <- make_bag_of_words(path) %>%
+	  paste(collapse=" ")
 	return(one_line)
 }
 
 
 strip_and_write <- function(filename){
 	path <- paste(path_to_transcripts, filename, sep='/')
-	bag <- make_bag_of_words(path)
 	one_line <- concat_words(path)
 
 	root_name <- strsplit(filename, "\\.")[[1]][1] 
