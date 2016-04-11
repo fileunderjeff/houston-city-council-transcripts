@@ -22,12 +22,19 @@ Currently, we've accumulated data for:
 - CM Stardig (District A)
 - CM Davis (District B)
 - CM Cohen (District C)
+- CM Travis (District G)
 - CM Cisneros (District H)
-- CM Travis
+- CM Laster (District J)
+- CM Kubosh (AL1)
+- CM Robinson (AL3)
+- CM Edwards (AL4)
+- CM Christie (AL5)
 
 Future plans include:
 
-- Adding all council districts (letter & at large)
+- Adding any missing council districts
+- Separating out questions from candidate responses
+- Tagging questions and responses by topic for correlation between interviews
 - Look at word frequency based on issue, issue/candidate
 
 You can view and comment on the completed word frequency matricies here: https://docs.google.com/spreadsheets/d/1GysPef6KByUq9cVmaYZGDM82GZ9MCFvQvCHtfQMQOE4
