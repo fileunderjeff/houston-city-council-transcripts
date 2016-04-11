@@ -1,10 +1,9 @@
 library(tm)
 library(dplyr)
 
-# Get raw data
 
 path_to_transcripts <- 'raw'
-path_to_clean_dir <- 'stripped'
+path_to_clean_dir <- 'clean'
 
 make_bag_of_words <- function(path){
 	raw_words <- readLines(path) %>%
@@ -14,7 +13,7 @@ make_bag_of_words <- function(path){
 	return(bag_of_words)
 }
 
-make_one_line <- function(path){
+concat_words <- function(path){
 	bag <- make_bag_of_words(path)
 	one_line <- paste(bag, collapse=" ")
 	return(one_line)
@@ -24,9 +23,12 @@ make_one_line <- function(path){
 strip_and_write <- function(filename){
 	path <- paste(path_to_transcripts, filename, sep='/')
 	bag <- make_bag_of_words(path)
-	one_line <- make_one_line(path)
+	one_line <- concat_words(path)
 
-	fileConn<-file(paste(path_to_clean_dir, filename, sep='/'))
+	root_name <- strsplit(filename, "\\.")[[1]][1] 
+	clean_name <- paste(root_name, "clean.txt", sep="-")
+	clean_file_path <- paste(path_to_clean_dir, clean_name, sep='/')
+	fileConn <- file(clean_file_path)
 	writeLines(one_line, fileConn)
 	close(fileConn)
 }
