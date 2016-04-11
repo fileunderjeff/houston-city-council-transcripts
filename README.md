@@ -17,12 +17,13 @@ This dataset-in-progress uses YouTube's automatic transcription feature. From th
 - Order the data into a matrix (R)
 - Sort the matrix based on word frequency (R)
 
-Currently, we've processed data for:
+Currently, we've accumulated data for:
 
 - CM Stardig (District A)
 - CM Davis (District B)
 - CM Cohen (District C)
 - CM Cisneros (District H)
+- CM Travis
 
 Future plans include:
 
