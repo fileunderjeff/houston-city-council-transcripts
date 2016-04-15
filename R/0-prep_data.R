@@ -5,8 +5,14 @@ library(dplyr)
 path_to_transcripts <- 'raw'
 path_to_clean_dir <- 'clean'
 
+take_every_nth_element <- function(vec, n){
+	newvec <- vec[seq.int(as.integer(n), length(vec), as.integer(n))]
+	return(newvec)
+}
+
 make_bag_of_words <- function(path){
 	bag_of_words <- readLines(path) %>%
+	  take_every_nth_element(3) %>%
 		strsplit(" ") %>%
 	  unlist() %>%
 		tolower()
